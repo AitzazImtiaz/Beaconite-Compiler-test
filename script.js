@@ -26,26 +26,27 @@ compileBtn.addEventListener("click", function () {
   compilerExplorerOptions.source = userCode;
 
   // Call the Compiler Explorer API with the options
-  fetch(compilerExplorerApiUrl, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(compilerExplorerOptions),
+fetch(compilerExplorerApiUrl, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify(compilerExplorerOptions)
+})
+  .then(function(response) {
+    console.log(response);
+    return response.json();
   })
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      // Get the output from the Compiler Explorer response
-      var output = data.stdout || data.stderr;
+  .then(function(data) {
+    // Get the output from the Compiler Explorer response
+    var output = data.stdout || data.stderr;
 
-      // Update the output div with the output text
-      outputDiv.textContent = output;
-    })
-    .catch(function (error) {
-      // Handle any errors from the API call
-      console.error(error);
-      outputDiv.textContent = "Error: " + error.message;
-    });
+    // Update the output div with the output text
+    outputDiv.textContent = output;
+  })
+  .catch(function(error) {
+    // Handle any errors from the API call
+    console.error(error);
+    outputDiv.textContent = "Error: " + error.message;
+  });
 });
