@@ -28,6 +28,9 @@ compileBtn.addEventListener("click", function () {
   // Call the Compiler Explorer API with the options
   fetch(compilerExplorerApiUrl, {
     method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
     body: JSON.stringify(compilerExplorerOptions),
   })
     .then(function (response) {
