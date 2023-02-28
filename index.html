@@ -1,39 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Beaconite Compiler</title>
-    <link rel="stylesheet" href="style.css">
-<!-- Load Compiler Explorer script -->
-<script src="script.js"></script>
-  </head>
-  <body>
-    <header>
-      <img src="images/logo.png" alt="Beaconite Compiler">
-    </header>
-    <main>
-      <h1>Welcome to Beaconite Compiler!</h1>
-      <p>Enter your C++ code below:</p>
-      <textarea id="code"></textarea>
-      <button id="compile-btn">Compile</button>
-      <div id="output"></div>
-    </main>
-    <footer>
-      <p>Made with love ❤️ by Aira Thunberg and Aitzaz Imtiaz</p>
-    </footer>
-    <script src="script.js"></script>
-    <script>
-var prefixStatic = "/assets";
-cppsh.app(document.getElementById('compiler'),{"ajax":true},{});
-</script>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RLQFT1V1QW" crossorigin="anonymous"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-RLQFT1V1QW');
-</script>
-
-  </body>
+<head>
+  <title>C++ Compiler</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://codemirror.net/theme/dracula.css">
+  <script src="https://codemirror.net/lib/codemirror.js"></script>
+  <script src="https://codemirror.net/mode/clike/clike.js"></script>
+  <style>
+    .CodeMirror {
+      height: auto;
+      border: 1px solid #ddd;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h1>C++ Compiler</h1>
+  <textarea id="code"></textarea>
+  <button id="compile-btn">Compile</button>
+  <div id="output"></div>
+  <script src="index.js"></script>
+</body>
 </html>
