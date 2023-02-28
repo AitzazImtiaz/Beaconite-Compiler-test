@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Beaconite Compiler</title>
+    <link rel="stylesheet" href="style.css">
+<!-- Load CodeMirror scripts -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/codemirror.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/mode/clike/clike.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/theme/dracula.min.css">
+
+<!-- Load Compiler Explorer script -->
+<script src="https://godbolt.org/client.js"></script>
+  </head>
+  <body>
+    <header>
+      <img src="images/logo.png" alt="Beaconite Compiler">
+    </header>
+    <main>
+      <h1>Welcome to Beaconite Compiler!</h1>
+      <p>Enter your C++ code below:</p>
+      <textarea id="code"></textarea>
+      <button id="compile-btn">Compile</button>
+      <div id="output"></div>
+    </main>
+    <footer>
+      <p>Made with love ❤️ by Aira Thunberg and Aitzaz Imtiaz</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
